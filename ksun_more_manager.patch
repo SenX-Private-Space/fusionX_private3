@@ -1,17 +1,18 @@
-From fefe8c979e0fa92d9a1c1a260109a24169e9a204 Mon Sep 17 00:00:00 2001
-From: Muhammad Guntur <mochtur@gmail.com>
-Date: Sat, 19 Jul 2025 12:35:32 +0700
-Subject: [PATCH] apk_sign: Add more manager support
+From 980449941225918ababaa54589864d9b708ede8e Mon Sep 17 00:00:00 2001
+From: Uday <forteciipher@gmail.com>
+Date: Fri, 5 Sep 2025 15:18:02 +0530
+Subject: [PATCH] kernel/apk_sign: Add more kernel manager support
 
+Signed-off-by: Uday <forteciipher@gmail.com>
 ---
- kernel/apk_sign.c | 8 +++++++-
- 1 file changed, 7 insertions(+), 1 deletion(-)
+ kernel/apk_sign.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
 
 diff --git a/kernel/apk_sign.c b/kernel/apk_sign.c
-index c1e803d7..5f82476c 100644
+index c1e803d7..8a492667 100644
 --- a/kernel/apk_sign.c
 +++ b/kernel/apk_sign.c
-@@ -333,5 +333,11 @@ bool is_manager_apk(char *path)
+@@ -333,5 +333,12 @@ bool is_manager_apk(char *path)
  		return false;
  	}
  
@@ -21,9 +22,10 @@ index c1e803d7..5f82476c 100644
 +	|| check_v2_signature(path, 0x180, "7e0c6d7278a3bb8e364e0fcba95afaf3666cf5ff3c245a3b63c8833bd0445cc4") // 5ec1cff/KernelSU
 +	|| check_v2_signature(path, 0x396, "f415f4ed9435427e1fdf7f1fccd4dbc07b3d6b8751e4dbcec6f19671f427870b") // rsuntk/KernelSU
 +	|| check_v2_signature(path, 0x363, "4359c171f32543394cbc23ef908c4bb94cad7c8087002ba164c8230948c21549") // backslashxx/KernelSU
-+	|| check_v2_signature(path, 0x35c, "947ae944f3de4ed4c21a7e4f7953ecf351bfa2b36239da37a34111ad29993eef") // ShirkNeko/KernelSU
++	|| check_v2_signature(path, 0x35c, "947ae944f3de4ed4c21a7e4f7953ecf351bfa2b36239da37a34111ad29993eef") // ShirkNeko/SukiSU-Ultra
++	|| check_v2_signature(path, 0x39b, "593d4ce870c02468639efeef631e07ca4d852d63f154be56706229f9a5be0800") // TheWildJames/Wild-KernelSU
 +	);
  }
 -- 
-2.47.1.windows.1
+2.43.0
 
